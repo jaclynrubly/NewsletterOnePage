@@ -1,0 +1,139 @@
+// Variables
+@white: #FFF;
+@black: #000;
+@text-color: #444;
+@border-radius: 3px;
+
+@short-side: 450px;
+
+html { 
+	box-sizing: border-box;
+	font-size: 10px;
+	line-height: 1.42857143;
+}
+*, *:before, *:after { box-sizing: inherit; }
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	background-color: #F2F2F2;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+
+main {
+	margin: auto;
+}
+
+p {
+	font-size: 1.6rem;
+	padding-right: 8rem;
+}
+.disclaimer {
+	font-size: 1.1rem;
+	color: darken(@black, 70%);
+	line-height: 1.2;
+	position: absolute;
+	bottom: 2rem;
+	padding-right: 17rem;
+}
+strong {
+	font-weight: 700;
+}
+
+
+.modal {
+	position: relative;
+	width: @short-side;
+	height: calc(@short-side * 1.61);
+	padding: 3rem;
+	background: @white;
+	border: 2.5rem solid #FFCC00;
+	box-shadow: 2px 2px 4px #BBB;
+	&__close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: @white;
+		font-size: 1.3rem;
+		line-height: 0;
+		border: none;
+		background-color: @black;
+		width: 30px;
+		height: 30px;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	&__heading {
+		font-family: 'Bentham', serif;
+		font-size: 5.5rem;
+		font-weight: 400;
+		line-height: 0.9;
+		margin: 3rem 0 4.8rem;
+		letter-spacing: -0.1rem;
+	}
+	
+	&__sub-heading {
+		text-transform: uppercase;
+		color: lighten(@black, 40%);
+		font-size: 1.1rem;
+		font-weight: 300;
+		margin: 1rem 0;
+		border-left: 1px solid;
+		padding-left: 1rem;
+		padding-bottom: 1.61rem;
+	}
+}
+
+input[type="email"] {
+	display: block;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.5rem;
+	padding: 1.3rem;
+	border: 1px solid lighten(@black, 80%);
+	width: 100%;
+	margin: 2rem 0 1rem;
+}
+.btn {
+	border: none;
+	background: @black;
+	color: @white;
+	display: block;
+	width: 100%;
+	padding: 1.61rem 1rem;
+	font-size: 2rem;
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+	&:hover,
+	&:focus {
+		outline: 0;
+		background: #FFCC00;
+		color: @black;
+		font-weight: 700;
+	}
+}
+
+
+
+
+
+// Utilities
+// Bootstrap sr-only
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
